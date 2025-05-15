@@ -11,6 +11,8 @@
       <geometry>
         <mesh filename="package://uav_simulator/urdf/quadcopter/meshes/CERLAB_quadcopter.stl" scale="1.5 1.5 1.5"/>
       </geometry>
+      <collide_bitmask>0x1</collide_bitmask> <!-- filter lidar to group2 -->
+      <collide_with>0x2</collide_with> 
     </collision>
     <visual name="quadcotper__visual">
        <origin rpy="0 0 0" xyz="0   0   -0.02"/>
@@ -23,6 +25,8 @@
   <gazebo reference="quadcopter">
   	<material>quadcopter/Diffusion</material>
   </gazebo>
+
+
 
 
   <gazebo>

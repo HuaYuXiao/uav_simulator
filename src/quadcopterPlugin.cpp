@@ -42,15 +42,15 @@ void DroneSimpleController::Load(physics::ModelPtr _model, sdf::ElementPtr _sdf)
   //load parameters
   cmd_normal_topic_ = "/CERLAB/quadcopter/cmd_vel";
   cmd_acc_topic_ = "/CERLAB/quadcopter/cmd_acc";
-  target_pose_topic_ = "/CERLAB/quadcopter/setpoint_pose";
+  target_pose_topic_ = "/mavros/setpoint_position/local";
   takeoff_topic_ = "/CERLAB/quadcopter/takeoff";
   land_topic_ = "/CERLAB/quadcopter/land";
   reset_topic_ = "/CERLAB/quadcopter/reset";
   posctrl_topic_ = "/CERLAB/quadcopter/posctrl";
-  gt_pose_topic_ = "/CERLAB/quadcopter/pose_raw";
+  gt_pose_topic_ = "/mavros/local_position/pose_raw";
   gt_vel_topic_ = "/CERLAB/quadcopter/vel_raw";
   gt_acc_topic_ = "/CERLAB/quadcopter/acc_raw";
-  gt_odom_topic_ = "/CERLAB/quadcopter/odom_raw";
+  gt_odom_topic_ = "/mavros/local_position/odom_raw";
   switch_mode_topic_ = "/CERLAB/quadcopter/vel_mode";
   // imu_topic_ = "/CERLAB/quadcopter/imu";
   

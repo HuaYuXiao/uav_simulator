@@ -30,7 +30,7 @@ void poseCallback(const geometry_msgs::PoseStampedConstPtr& msg){
 int main(int argc, char** argv){
 	ros::init(argc, argv, "quadcopter_tf_broadcaster");
 	ros::NodeHandle nh;
-	std::string poseTopic = "/CERLAB/quadcopter/pose";
+	std::string poseTopic = "/mavros/local_position/pose";
 	if (argc > 1)  poseTopic = argv[1];
 	// cout << "poseTopic: " << poseTopic << endl;
 	ros::Subscriber sub = nh.subscribe(poseTopic, 1, &poseCallback);
